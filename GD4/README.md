@@ -3,7 +3,7 @@ AIFFEL Campus Online 7th Code Peer Review Templete
 
 코더 : 윤빛나
 
-리뷰어 : 윤여원
+리뷰어 : 
 
 🔑 **PRT(Peer Review Template)**
 
