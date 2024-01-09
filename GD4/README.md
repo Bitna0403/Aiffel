@@ -3,7 +3,7 @@ AIFFEL Campus Online 7th Code Peer Review Templete
 
 코더 : 윤빛나
 
-리뷰어 : 
+리뷰어 : 박준
 
 🔑 **PRT(Peer Review Template)**
 
@@ -12,20 +12,40 @@ AIFFEL Campus Online 7th Code Peer Review Templete
     - 문제를 해결하는 완성된 코드란 프로젝트 루브릭 3개 중 2개, 
     퀘스트 문제 요구조건 등을 지칭
         - 해당 조건을 만족하는 부분의 코드 및 결과물을 근거로 첨부
-    
+
+1. 번역기 모델 학습에 필요한 텍스트 데이터 전처리가 한국어 포함하여 잘 이루어졌다. - O
+![corpusextract](https://github.com/currybab/first-repository/assets/7679722/eb9ddf34-c30b-4a3a-b1ac-5a08f9978b34)
+![tokenize](https://github.com/currybab/first-repository/assets/7679722/f5341711-e085-4e83-8412-eca8212f15d0)
+corpus간의 불필요한 문자 제거 및 중복제거 가 잘 이루어졌고 토크나이즈화 할때 한글에 mecab이 적용되었습니다.
+
+2. Attentional Seq2seq 모델이 정상적으로 구동된다. - O
+![train](https://github.com/currybab/first-repository/assets/7679722/6d47077d-a4dd-4c9d-9c8e-75802b330bb9)
+훈련이 진행되었습니다.
+
+3. 테스트 결과 의미가 통하는 수준의 번역문이 생성되었다. - X
+epoch수가 모잘라서 아직 의미있는 수준의 번역문이 생성되지는 않았습니다.
+
 - [x]  **2. 전체 코드에서 가장 핵심적이거나 가장 복잡하고 이해하기 어려운 부분에 작성된 
 주석 또는 doc string을 보고 해당 코드가 잘 이해되었나요?**
     - 해당 코드 블럭에 doc string/annotation이 달려 있는지 확인
     - 해당 코드가 무슨 기능을 하는지, 왜 그렇게 짜여진건지, 작동 메커니즘이 뭔지 기술.
     - 주석을 보고 코드 이해가 잘 되었는지 확인
         - 잘 작성되었다고 생각되는 부분을 근거로 첨부합니다.
-        
+
+![](https://github.com/currybab/first-repository/assets/7679722/841ec9af-5c45-4705-946c-b110ddf65155)
+
+코드가 흐름에 따라 무엇을 확인하는지 잘 짜여있습니다.
+
 - [x]  **3. 에러가 난 부분을 디버깅하여 문제를 “해결한 기록을 남겼거나” 
 ”새로운 시도 또는 추가 실험을 수행”해봤나요?**
     - 문제 원인 및 해결 과정을 잘 기록하였는지 확인 또는
     - 문제에서 요구하는 조건에 더해 추가적으로 수행한 나만의 시도, 
     실험이 기록되어 있는지 확인
         - 잘 작성되었다고 생각되는 부분을 근거로 첨부합니다.
+
+![](https://github.com/currybab/first-repository/assets/7679722/4edf6fc1-8318-4777-8183-d2d5bcc335af)
+
+초기 전처리 시도시에 위와 같이 중복된것을 한글과 영어를 각각 제거하는 과정이 있었는데 이부분이 다른 시도를 통해 수정되었음을 확인하였습니다.
         
 - [x]  **4. 회고를 잘 작성했나요?**
     - 주어진 문제를 해결하는 완성된 코드 내지 프로젝트 결과물에 대해
@@ -34,7 +54,15 @@ AIFFEL Campus Online 7th Code Peer Review Templete
         인풋이 들어가 최종적으로 아웃풋이 나오기까지의 전체 흐름을 도식화하여 
         모델 아키텍쳐에 대한 이해를 돕고 있는지 확인
 
+![](https://github.com/currybab/first-repository/assets/7679722/a74335cd-517e-47b5-a637-c70d5d99b30b)
+
+회고에서 배운점, 아쉬운점이 잘 적혀있습니다.
+
 - [x]  **5. 코드가 간결하고 효율적인가요?**
     - 파이썬 스타일 가이드 (PEP8) 를 준수하였는지 확인
     - 코드 중복을 최소화하고 범용적으로 사용할 수 있도록 모듈화(함수화) 했는지
         - 잘 작성되었다고 생각되는 부분을 근거로 첨부합니다.
+
+![](https://github.com/currybab/first-repository/assets/7679722/841ec9af-5c45-4705-946c-b110ddf65155)
+
+코드에 주석도 잘 설명도 잘 적혀있고 간결하게 작성되어 있습니다.
